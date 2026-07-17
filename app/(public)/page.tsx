@@ -16,6 +16,20 @@ import Footer from "@/modules/landing/Footer";
  * este incremento — se implementa junto al Middleware en el handoff
  * del panel/login (handoff sección 4).
  */
+
+// Proyectos de la galería. Completar `href` cuando el proyecto esté
+// desplegado en producción — mientras tanto la card se muestra como
+// "Próximamente" (ver modules/landing/Gallery.tsx).
+const PROJECT_ITEMS = [
+  {
+    id: "mediturnos",
+    title: "MediTurnos",
+    description: "Sistema de gestión de turnos médicos.",
+    imageSrc: "/projects/mediturnos.jpg",
+    href: "", // TODO: completar con la URL de producción cuando esté disponible
+  },
+];
+
 export default function LandingPage() {
   return (
     <>
@@ -25,15 +39,15 @@ export default function LandingPage() {
         <AboutSection />
 
         <section className="mx-auto max-w-6xl px-6 py-20">
-          {/* TODO: reemplazar con datos reales del fundador antes de producción */}
           <FounderCard
-            name="[Nombre del fundador — pendiente]"
+            name="Axel Altamirano"
             role="Fundador"
-            bio="[Bio pendiente de contenido — Content Strategist / Brand Strategist Agent]"
+            bio="Estudiante avanzado de la Licenciatura en Sistemas de Información (UNNE) y desarrollador. Trabaja con Python, SQL y JavaScript en el desarrollo de sistemas a medida, con formación complementaria en inteligencia artificial (AWS Certified AI Practitioner, en curso) y análisis de datos (Bootcamp Data Analyst, Devlights)."
+            photoSrc="/brand/founder-axel.jpg"
           />
         </section>
 
-        <Gallery />
+        <Gallery items={PROJECT_ITEMS} />
         <ContactSection />
       </main>
       <Footer />
