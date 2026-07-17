@@ -51,7 +51,7 @@ export default function ContactSection() {
       }
 
       if (response.status === 429) {
-        setErrorMessage("Estás enviando demasiados mensajes. Esperá unos minutos e intentá de nuevo.");
+        setErrorMessage("Muchos mensajes seguidos. Esperá unos minutos e intentá de nuevo.");
         setSubmitState("error");
         return;
       }

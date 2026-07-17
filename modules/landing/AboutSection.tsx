@@ -1,7 +1,7 @@
 /**
  * AboutSection — presentación de la empresa.
- * Copy provisorio basado en Kit_de_Marca_Altamirano_v1.0 (sección 1).
- * PENDIENTE de revisión final por Copywriter Agent (MK-04).
+ * Copy final aprobado por Copywriter Agent (MK-04), ver
+ * PRJ-01_Copy_Final_Landing_v1.0.
  */
 export default function AboutSection() {
   return (
@@ -13,12 +13,13 @@ export default function AboutSection() {
         <div className="space-y-4 text-tinta/80">
           <p>
             Somos una software factory con base en Corrientes, Argentina. Desarrollamos
-            sitios web, sistemas administrativos, dashboards y automatizaciones a medida
-            para pymes y profesionales.
+            sitios web, sistemas administrativos, dashboards y automatizaciones a medida,
+            para pymes y profesionales que buscan resultados concretos.
           </p>
           <p>
-            Trabajamos bajo un modelo de mensualidad fija que incluye desarrollo y
-            mantenimiento continuo: no te dejamos solo el día después de la entrega.
+            Trabajamos con una mensualidad fija que incluye desarrollo y mantenimiento
+            continuo: no te dejamos solo el día después de la entrega. Así entendemos el
+            acompañamiento.
           </p>
         </div>
       </div>

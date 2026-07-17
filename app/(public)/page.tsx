@@ -24,7 +24,7 @@ const PROJECT_ITEMS = [
   {
     id: "mediturnos",
     title: "MediTurnos",
-    description: "Sistema de gestión de turnos médicos.",
+    description: "Gestión de turnos médicos, simple y a medida.",
     imageSrc: "/projects/mediturnos.jpg",
     href: "", // TODO: completar con la URL de producción cuando esté disponible
   },
@@ -42,7 +42,7 @@ export default function LandingPage() {
           <FounderCard
             name="Axel Altamirano"
             role="Fundador"
-            bio="Estudiante avanzado de la Licenciatura en Sistemas de Información (UNNE) y desarrollador. Trabaja con Python, SQL y JavaScript en el desarrollo de sistemas a medida, con formación complementaria en inteligencia artificial (AWS Certified AI Practitioner, en curso) y análisis de datos (Bootcamp Data Analyst, Devlights)."
+            bio="Estudiante avanzado de la Licenciatura en Sistemas de Información (UNNE). Desarrolla con Python, SQL y JavaScript. Formación en IA (AWS Certified AI Practitioner, en curso) y datos (Bootcamp Data Analyst, Devlights)."
             photoSrc="/brand/founder-axel.jpg"
           />
         </section>
