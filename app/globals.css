@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-terracota: #d85a30;
+  --color-tinta: #2c2c2a;
+  --color-ambar: #ef9f27;
+  --color-crema: #faece7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-tinta);
+  background-color: #ffffff;
+}
+
+/* Foco visible para navegación por teclado — accesibilidad básica (EMP-04) */
+:focus-visible {
+  outline: 2px solid var(--color-ambar);
+  outline-offset: 2px;
+}
