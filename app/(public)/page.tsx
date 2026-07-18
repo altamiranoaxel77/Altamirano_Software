@@ -1,7 +1,7 @@
 import Header from "@/modules/landing/Header";
 import Hero from "@/modules/landing/Hero";
 import AboutSection from "@/modules/landing/AboutSection";
-import FounderCard from "@/modules/landing/FounderCard";
+import TeamSection from "@/modules/team/TeamSection";
 import Gallery from "@/modules/landing/Gallery";
 import ContactSection from "@/modules/landing/ContactSection";
 import Footer from "@/modules/landing/Footer";
@@ -38,14 +38,7 @@ export default function LandingPage() {
         <Hero />
         <AboutSection />
 
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <FounderCard
-            name="Axel Altamirano"
-            role="Fundador"
-            bio="Estudiante avanzado de la Licenciatura en Sistemas de Información (UNNE). Desarrolla con Python, SQL y JavaScript. Formación en IA (AWS Certified AI Practitioner, en curso) y datos (Bootcamp Data Analyst, Devlights)."
-            photoSrc="/brand/founder-axel.jpg"
-          />
-        </section>
+        <TeamSection />
 
         <Gallery items={PROJECT_ITEMS} />
         <ContactSection />

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations/contact";
+import SocialLinks from "@/modules/shared/SocialLinks";
+import { CONTACT_LINKS } from "./contactLinks.data";
 
 /**
  * ContactSection — formulario de contacto.
@@ -33,6 +35,11 @@ export default function ContactSection() {
     defaultValues: { nombre: "", email: "", mensaje: "", website: "" },
   });
 
+  /**
+   * onSubmit — se ejecuta al enviar el formulario ya validado por Zod.
+   * Llama a POST /api/contact y actualiza el estado de UI (loading /
+   * success / error) según la respuesta del servidor.
+   */
   const onSubmit = async (values: ContactFormValues) => {
     setSubmitState("loading");
     setErrorMessage(null);
@@ -76,6 +83,10 @@ export default function ContactSection() {
       <p className="mb-8 text-tinta/70">
         Te respondemos a la brevedad. Sin compromiso.
       </p>
+
+      {/* Links de contacto directo (WhatsApp, email, Instagram, LinkedIn).
+          Solo se muestran los que estén habilitados en contactLinks.data.ts */}
+      <SocialLinks links={CONTACT_LINKS} className="mb-8" />
 
       {submitState === "success" ? (
         <div
