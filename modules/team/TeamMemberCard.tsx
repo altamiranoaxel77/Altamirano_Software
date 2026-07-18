@@ -1,28 +1,24 @@
-interface FounderCardProps {
-  name: string;
-  role: string;
-  bio: string;
-  photoSrc?: string;
+import SocialLinks from "@/modules/shared/SocialLinks";
+import type { TeamMember } from "./team.data";
+
+interface TeamMemberCardProps {
+  member: TeamMember;
 }
 
 /**
- * FounderCard — tarjeta de presentación del fundador.
+ * TeamMemberCard — tarjeta individual de un integrante del equipo.
  *
- * BLOQUEADO PARCIALMENTE: el handoff no incluye nombre, foto ni bio real
- * del fundador. Se implementa el componente recibiendo estos datos por
- * props (no hardcodeados) para no inventar información de una persona real.
- * Content Strategist / Brand Strategist deben proveer estos datos antes
- * del despliegue a producción; mientras tanto se usa un valor de ejemplo
- * explícitamente marcado como placeholder.
+ * Muestra foto (o placeholder si no hay), nombre, rol, bio y la fila de
+ * íconos de redes sociales (solo los que estén `enabled: true` en los
+ * datos — ver SocialLinks.tsx). No contiene datos hardcodeados: todo
+ * llega por props desde TeamSection.tsx / team.data.ts.
  */
-export default function FounderCard({
-  name,
-  role,
-  bio,
-  photoSrc,
-}: FounderCardProps) {
+export default function TeamMemberCard({ member }: TeamMemberCardProps) {
+  const { name, role, bio, photoSrc, socialLinks } = member;
+
   return (
     <div className="flex flex-col items-center gap-4 rounded-2xl border border-crema bg-white p-8 text-center shadow-sm md:flex-row md:items-start md:text-left">
+      {/* Foto o placeholder circular */}
       <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full bg-crema">
         {photoSrc ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -36,10 +32,13 @@ export default function FounderCard({
           </div>
         )}
       </div>
+
+      {/* Info textual + links sociales */}
       <div>
         <p className="text-lg font-semibold text-tinta">{name}</p>
         <p className="text-sm font-medium text-terracota">{role}</p>
         <p className="mt-2 text-sm text-tinta/80">{bio}</p>
+        <SocialLinks links={socialLinks} className="mt-3 justify-center md:justify-start" />
       </div>
     </div>
   );
