@@ -26,7 +26,7 @@ const PROJECT_ITEMS = [
     title: "MediTurnos",
     description: "Gestión de turnos médicos, simple y a medida.",
     imageSrc: "/projects/mediturnos.jpg",
-    href: "", // TODO: completar con la URL de producción cuando esté disponible
+    href: "https://github.com/altamiranoaxel77/Mediturno", // TODO: completar con la URL de producción cuando esté disponible
   },
 ];
 
