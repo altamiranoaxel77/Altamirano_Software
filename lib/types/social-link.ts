@@ -27,6 +27,14 @@ export interface SocialLink {
    */
   href: string;
   /**
+   * Texto legible para mostrar en pantalla y copiar (ej. la dirección de
+   * email o el @usuario de Instagram). Opcional: si no se completa, en los
+   * lugares que lo usan se cae de nuevo a `label`. Sirve para que el
+   * visitante pueda copiar y pegar el dato sin depender de que el link
+   * funcione (por ejemplo, si todavía no tiene WhatsApp Web configurado).
+   */
+  displayText?: string;
+  /**
    * Controla si el link se muestra o no en pantalla.
    * Poné `false` para ocultarlo sin necesidad de borrar el resto de los
    * datos — útil mientras todavía no tenés la URL definitiva. Cuando la

@@ -19,7 +19,7 @@ export default function Header() {
           <Image
             src={logoHorizontal}
             alt="Altamirano Software"
-            className="h-12 w-auto md:h-14"
+            className="h-10 w-auto md:h-11"
             priority
           />
         </a>

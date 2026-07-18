@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations/contact";
-import SocialLinks from "@/modules/shared/SocialLinks";
+import ContactLinksList from "@/modules/shared/ContactLinksList";
 import { CONTACT_LINKS } from "./contactLinks.data";
 
 /**
@@ -84,9 +84,10 @@ export default function ContactSection() {
         Te respondemos a la brevedad. Sin compromiso.
       </p>
 
-      {/* Links de contacto directo (WhatsApp, email, Instagram, LinkedIn).
-          Solo se muestran los que estén habilitados en contactLinks.data.ts */}
-      <SocialLinks links={CONTACT_LINKS} className="mb-8" />
+      {/* Links de contacto directo (WhatsApp, email, Instagram, LinkedIn),
+          con texto visible y botón de copiar. Solo se muestran los que
+          estén habilitados en contactLinks.data.ts */}
+      <ContactLinksList links={CONTACT_LINKS} className="mb-8" />
 
       {submitState === "success" ? (
         <div
