@@ -2,7 +2,14 @@ import TeamMemberCard from "./TeamMemberCard";
 import { TEAM_MEMBERS } from "./team.data";
 
 /**
- * TeamSection — sección "Nuestro equipo" de la landing pública.
+ * TeamSection — sección "Quién te acompaña" de la landing pública.
+ *
+ * Encabezado ajustado por Copywriter Agent (MK-04): "Nuestro equipo" en
+ * plural, con una sola tarjeta debajo, generaba una impresión de
+ * estructura que no existe. "Quién te acompaña" es singular, centrado
+ * en la persona, y no promete atención exclusiva permanente (ver Brand
+ * Strategy Report, sección 11) — sigue siendo válido cuando se sume
+ * gente al equipo.
  *
  * Recorre TEAM_MEMBERS (team.data.ts) y renderiza una TeamMemberCard por
  * cada integrante, sin límite de cantidad. Con un solo integrante se ve
@@ -25,7 +32,7 @@ export default function TeamSection() {
 
   return (
     <section id="equipo" className="mx-auto max-w-6xl px-6 py-20">
-      <h2 className="mb-10 text-3xl font-bold text-tinta">Nuestro equipo</h2>
+      <h2 className="mb-10 text-3xl font-bold text-tinta">Quién te acompaña</h2>
       <div className={`grid gap-6 ${isSingleMember ? "grid-cols-1" : "sm:grid-cols-2"}`}>
         {TEAM_MEMBERS.map((member) => (
           <TeamMemberCard key={member.id} member={member} />
