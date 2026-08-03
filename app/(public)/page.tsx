@@ -28,6 +28,13 @@ const PROJECT_ITEMS = [
     imageSrc: "/projects/mediturnos.jpg",
     href: "https://mediturno-eight.vercel.app/", // TODO: completar con la URL de producción cuando esté disponible
   },
+  {
+    id: "unity_landing",
+    title: "Unity Martial Arts",
+    description: "Landing page responsive con contacto mediante correo",
+    imageSrc: "/projects/unity_landing.png",
+    href: "https://unitymartialarts.vercel.app/", // TODO: completar con la URL de producción cuando esté disponible
+  },
 ];
 
 export default function LandingPage() {
